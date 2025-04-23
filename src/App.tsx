@@ -1,10 +1,9 @@
 import * as React from "react";
-import { GjsEditor } from "./grapesjs/GrapeJsEditor.tsx";
+import { GjsEditor } from "./grapesjs/editor.tsx";
 
 export const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
       <GjsEditor />
     </div>
   );

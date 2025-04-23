@@ -44,7 +44,22 @@ export const GjsEditor = () => {
     setEditor(editor);
   }, []);
 
-  return <div id="gjs"></div>;
+  useEffect(() => {
+    if (editor) {
+      editor.BlockManager.add("hero", {
+        label: "Hello world",
+      });
+    }
+  }, [editor]);
+
+  return (
+    <div className="w-full">
+      <div className="panel__top">
+        <div className="panel__basic-actions"></div>
+      </div>
+      <div id="gjs"></div>
+    </div>
+  );
 };
 
 export default GjsEditor;

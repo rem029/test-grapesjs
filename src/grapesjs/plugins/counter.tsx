@@ -1,7 +1,7 @@
 // plugins/reactCounter.ts
 import { createRoot } from "react-dom/client";
 import React from "react";
-import Counter from "../../components/Counter.tsx";
+import Counter from "../../components/counter.tsx";
 
 const counterPlugin = (editor) => {
   const { Components, BlockManager } = editor;
