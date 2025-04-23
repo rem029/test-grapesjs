@@ -1,14 +1,14 @@
 // plugins/reactCounter.ts
-import { createRoot } from 'react-dom/client';
-import React from 'react';
-import Counter from '../../components/Counter';
+import { createRoot } from "react-dom/client";
+import React from "react";
+import Counter from "../../components/Counter.tsx";
 
 const counterPlugin = (editor) => {
   const { Components, BlockManager } = editor;
 
-  Components.addType('react-counter', {
+  Components.addType("react-counter", {
     // 1️⃣ Model just stores an empty div; no HTML needed
-    model: { defaults: { tagName: 'div', draggable: true } },
+    model: { defaults: { tagName: "div", draggable: true } },
 
     // 2️⃣ Custom view mounts/unmounts React
     view: {
@@ -24,10 +24,10 @@ const counterPlugin = (editor) => {
   });
 
   // 3️⃣ Expose it as a draggable block
-  BlockManager.add('counter-block', {
-    label: 'Counter',
-    category: 'React',
-    content: { type: 'react-counter' },
+  BlockManager.add("counter-block", {
+    label: "Counter",
+    category: "React",
+    content: { type: "react-counter" },
   });
 };
 
